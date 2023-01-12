@@ -1,0 +1,34 @@
+#include <iostream>
+
+using namespace std;
+
+float payableAmount (string day, string month, float amount);
+
+main ()
+{
+	float amount, payable;
+    string day, month;
+    cout << "Enter total purchase amount: ";
+    cin >> amount;
+    cout << "Enter day: ";
+    cin >> day;
+    cout << "Enter month: ";
+    cin >> month;
+    payable = payableAmount (day, month, amount);
+    cout << "Payable amount is: " << payable << endl;
+}
+
+float payableAmount (string day, string month, float amount)
+{
+    float payable, discount = 0;
+    if (day == "Sunday" && (month == "October" || month == "March" || month == "August"))
+    {
+        discount = (amount * 10)/100;
+    }
+    else if (day == "Monday" && (month == "November" || month == "December"))
+    {
+        discount = (amount * 5)/100;
+    }
+    payable = amount - discount;
+    return payable;
+}
