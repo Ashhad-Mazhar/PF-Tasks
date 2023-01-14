@@ -91,29 +91,16 @@ main ()
 
 void printMaze()
 {
-    cout << "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%" << endl;
-    cout << "%                                  %" << endl;
-    cout << "%                                  %" << endl;
-    cout << "%                                  %" << endl;
-    cout << "%                                  %" << endl;
-    cout << "%                                  %" << endl;
-    cout << "%                                  %" << endl;
-    cout << "%                                  %" << endl;
-    cout << "%                                  %" << endl;
-    cout << "%                                  %" << endl;
-    cout << "%                                  %" << endl;
-    cout << "%                                  %" << endl;
-    cout << "%                                  %" << endl;
-    cout << "%                                  %" << endl;
-    cout << "%                                  %" << endl;
-    cout << "%                                  %" << endl;
-    cout << "%                                  %" << endl;
-    cout << "%                                  %" << endl;
-    cout << "%                                  %" << endl;
-    cout << "%                                  %" << endl;
-    cout << "%                                  %" << endl;
-    cout << "%                                  %" << endl;
-    cout << "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%" << endl;
+    cout << "%%%%%%%%%%%%%%%" << endl;
+    cout << "%             %" << endl;
+    cout << "%             %" << endl;
+    cout << "%             %" << endl;
+    cout << "%             %" << endl;
+    cout << "%             %" << endl;
+    cout << "%             %" << endl;
+    cout << "%             %" << endl;
+    cout << "%             %" << endl;
+    cout << "%%%%%%%%%%%%%%%" << endl;
 }
 
 void gotoxy (int x, int y)
