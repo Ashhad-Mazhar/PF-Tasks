@@ -46,7 +46,14 @@ void lateOrEarly (int startingHours, int startingMinutes, int arrivalHours, int 
         difference = totalStartingMinutes - totalArrivalMinutes;
         outputHours = difference/60;
         outputMinutes = difference % 60;
-        cout << outputHours << ":" << outputMinutes << " hours before the start." << endl;
+        if (outputMinutes < 10)
+        {
+            cout << outputHours << ":0" << outputMinutes << " hours before the start." << endl;
+        }
+        else if (outputMinutes >= 10)
+        {
+            cout << outputHours << ":" << outputMinutes << " hours before the start." << endl;
+        }
     }
     if (((totalArrivalMinutes - totalStartingMinutes) > 1) && ((totalArrivalMinutes - totalStartingMinutes) < 60))
     {
@@ -58,6 +65,13 @@ void lateOrEarly (int startingHours, int startingMinutes, int arrivalHours, int 
         difference = totalArrivalMinutes - totalStartingMinutes;
         outputHours = difference/60;
         outputMinutes = difference % 60;
-        cout << outputHours << ":" << outputMinutes << " hours after the start." << endl;
+        if (outputMinutes < 10)
+        {
+            cout << outputHours << ":0" << outputMinutes << " hours after the start." << endl;
+        }
+        else if (outputMinutes >= 10)
+        {
+            cout << outputHours << ":" << outputMinutes << " hours after the start." << endl;
+        }
     }
 }
