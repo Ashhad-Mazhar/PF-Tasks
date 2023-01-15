@@ -27,11 +27,7 @@ void lateOrEarly (int startingHours, int startingMinutes, int arrivalHours, int 
     {
         cout << "Late" << endl;
     }
-    else if ((totalStartingMinutes - totalArrivalMinutes) >= 0 && (totalArrivalMinutes - totalStartingMinutes) <= 30)
-    {
-        cout << "On time" << endl;
-    }
-    else if ((totalStartingMinutes - totalArrivalMinutes) >= 0 && (totalArrivalMinutes - totalStartingMinutes) <= 30)
+    else if ((totalStartingMinutes - totalArrivalMinutes) >= 0 && (totalStartingMinutes - totalArrivalMinutes) <= 30)
     {
         cout << "On time" << endl;
     }
