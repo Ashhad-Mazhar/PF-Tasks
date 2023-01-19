@@ -2,7 +2,7 @@
 #include <windows.h>
 
 using namespace std;
-void printMaze(int score);
+void printMaze();
 void gotoxy (int x, int y);
 void clearGhost (int x, int y, char previous);
 void clearPacman (int x, int y);
@@ -23,13 +23,13 @@ main ()
     int score = 0;
     string direction1 = "right";
     string direction2 = "down";
-    char previousChar1 = ' ';
-    char previousChar2 = ' ';
-    char previousChar3 = ' ';
     bool gameRunning = true;
     system ("cls");
-    printMaze(score);
+    printMaze();
     printScore (score);
+    char previousChar1 = getCharAtxy (gx1, gy2);
+    char previousChar2 = getCharAtxy (gx2, gy2);
+    char previousChar3 = getCharAtxy (gx3, gy3);
     showPacman (gx3, gy3);
     showGhost (gx1, gy1);
     showGhost (gx2, gy2);
@@ -200,7 +200,7 @@ main ()
     }
 }
 
-void printMaze(int score)
+void printMaze()
 {
 	cout << "##########################################################################" << endl;
 	cout << "||.. .........................................................  ......  ||" << endl;
