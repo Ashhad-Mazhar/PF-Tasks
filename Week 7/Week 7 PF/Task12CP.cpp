@@ -20,26 +20,16 @@ main ()
 
 int calculateGCD (int number1, int number2)
 {
-    int gcd, large, small, divisor, divisor1, remainder;
-    if (number1 > number2)
+    int gcd = 1;
+    int x = 1;
+    while (x != number1 && x != number2)
     {
-        large = number1;
-        small = number2;
+        if (number1 % x == 0 && number2 % x ==0)
+        {
+            gcd = x;
+        }
+        x = x + 1;
     }
-    else
-    {
-        large = number2;
-        small = number1;
-    }
-    divisor = large / small;
-    remainder = large % small;
-    while (remainder != 0)
-    {
-        divisor1 = divisor/remainder;
-        remainder = divisor % remainder;
-        divisor1 = divisor;
-    }
-    gcd = divisor;
     return gcd;
 }
 

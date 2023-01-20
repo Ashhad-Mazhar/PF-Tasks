@@ -2,29 +2,47 @@
 
 using namespace std;
 
-float calculatePrice(float money, int year);
+float calculatePrice(float inheritanceMoney, int year);
+void printOutput (float inheritanceMoney, float requiredMoney);
 
 main()
 {
-	float money, price;
+	float inheritanceMoney, requiredMoney;
 	int year;
 	cout << "Enter inheritance money: ";
-	cin >> money;
+	cin >> inheritanceMoney;
 	cout << "Enter year to live until: ";
 	cin >> year;
-	price = calculatePrice(money, year);
+	requiredMoney = calculatePrice(inheritanceMoney, year);
+	printOutput (inheritanceMoney, requiredMoney);
 }
 
-float calculatePrice(float money, int year)
+float calculatePrice(float inheritanceMoney, int year)
 {
-	int startingYear = 1800;
 	float requiredMoney = 0;
-	for (i = 1800; i <= year; i = i + 2)
+	for (int i = 1800; i <= year; i = i + 2)
 	{
 		requiredMoney = requiredMoney + 12000;
 	}
-	for (i = 1801; i <= year; i = i + 2)
+	for (int j = 1801; j <= year; j = j + 2)
 	{
-		requiredMoney = requiredMoney + (12000 + 50 * 
+		int age = 19;
+		requiredMoney = requiredMoney + 12000 + 50 * age;
+		age = age + 2;
+	}
+	return requiredMoney;
+}
+
+void printOutput (float inheritanceMoney, float requiredMoney)
+{
+	float difference = inheritanceMoney - requiredMoney;
+	if (inheritanceMoney >= requiredMoney)
+	{
+		cout << "Yes! He will live a carefree life and will have " << difference << " dollars left." << endl;
+	}
+	else if (inheritanceMoney < requiredMoney)
+	{
+		difference = -1 * difference;
+		cout << "He will need " << difference << " dollars to survive." << endl;
 	}
 }
